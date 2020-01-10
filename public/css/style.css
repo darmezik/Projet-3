@@ -1,0 +1,9 @@
+img{
+    width: 30%;
+}
+
+#slideshow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
