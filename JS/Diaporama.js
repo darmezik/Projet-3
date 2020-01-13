@@ -1,4 +1,3 @@
-console.clear();
 class Slideshow{
     constructor(id, imgs){
         this.idSlide = id;
@@ -19,14 +18,14 @@ class Slideshow{
         this.pause();
         this.play();
     }
-    nextImage(){ // Button next
+    nextImage(){
         this.imgNumber++;
         if(this.imgNumber > (this.imgs.length - 1)){
             this.imgNumber = 0;
         }
         this.domImg.src = this.imgs[this.imgNumber];
     }
-    prevImage(){ // Button prev
+    prevImage(){
         this.imgNumber--;
         if(this.imgNumber < 0){
             this.imgNumber = this.imgs.length - 1;
@@ -42,7 +41,7 @@ class Slideshow{
         this.timer = null;
         this.domPause.className = "pauseBtn";
     }
-    keyboard(e){ // Arrow Keyboard Left, right and space
+    keyboard(e){
         switch(e.keyCode){
             case 37:
                 this.nextImage();
