@@ -13,7 +13,7 @@ class Canvas {
             this.calibrate(canva);
             this.canva.addEventListener('click', (e) =>{ 
                 this.draw(e.offsetX, e.offsetY); 
-                this.drauw(canva.clientWidth /2, canva.clientHeight /2)
+                this.draw(canva.clientWidth /2, canva.clientHeight /2)
                 }); 
             this.canva.width = canva.clientWidth;
             this.canva.height = canva.clientHeight;
