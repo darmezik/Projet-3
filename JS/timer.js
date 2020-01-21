@@ -8,7 +8,7 @@ class Timer {
         this.eltTimer = document.getElementById(id);
         this.eltChrono = this.eltTimer.querySelector(".timerChrono");
         this.eltStart = this.eltTimer.querySelector(".timerStart");
-        this.eltStart.addEventListener('click', e => this.startTimer(Date.now() + 1000*30));
+        this.eltStart.addEventListener('click', e => this.startTimer(Date.now() + 1000*1200));
         this.endTime = localStorage.getItem(this.id + "endTime")
         if(this.endTime) this.startTimer(this.endTime);
     }

@@ -3,6 +3,9 @@
     <head>
         <title>Location de velos Lyon</title>
         <link rel="stylesheet" href="public/css/style.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <script src="https://kit.fontawesome.com/4c12a4a004.js"></script>
@@ -19,6 +22,17 @@
                 </div>
             </div>
         </section>
+        <section id="mapVelo">
+            <div id="map"></div>
+            <div id="stationI">
+                <h2>Détails de la station :</h2>
+                <ul id="info">
+                    <li>Adresse: <span id="stationAdress"></span></li>
+                    <li><span id="bikesStand"></span> places</li>
+                    <li><span id="availableBikes"></span> vélo(s) disponible(s)</li>
+                </ul>
+            </div>
+        </section>
         <section>
             <div id="timer">
                 <div class="timerChrono">-TEST--TIMER-</div>
@@ -31,8 +45,10 @@
             <button id="clear">Effacer</button>
         </section>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
         <script src="js/diaporama.js"></script>
         <script src="js/timer.js"></script>
         <script src="js/canvas.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
