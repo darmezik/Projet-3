@@ -86,10 +86,12 @@ div nav ul li a{
     text-align: center;
 }
 
-canvas{
-    width: 300px;
-    height: 200px;
+#canvas{
     margin: auto;
+    text-align: center;
+}
+canvas{
+    display: none;
     background: white;
     border: 1px solid black;
 }
