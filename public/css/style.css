@@ -89,9 +89,18 @@ div nav ul li a{
 canvas{
     width: 300px;
     height: 200px;
+    margin: auto;
     background: white;
     border: 1px solid black;
 }
 #check, #clear{
     display: none;
+}
+
+footer div{
+    height: 80px;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-top: 1px solid grey;
+    box-shadow: 5px 0px 10px grey;
+    text-align: center;
 }
