@@ -40,4 +40,3 @@ class Timer {
         else this.timeout = setTimeout(e => this.tic(), 1000);
     }
 }
-let timer = new Timer("timer");

@@ -11,27 +11,57 @@
         <script src="https://kit.fontawesome.com/4c12a4a004.js"></script>
     </head>
     <body>
+        <header>
+            <div id="logo">
+                <img src="public/images/bike.png" id="bike" alt="Logo d'un vélo" />
+                <img src="public/images/velo.png" id="lvelo" alt="Logo 'Lvélo's'" />
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="#logo">Accueil</a></li>
+                        <li><a href="#mapVelo">Carte</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <section>
             <div id="slideshow">
-                <img src="public/images/test1.jpg" alt="" />
                 <div class="button">
                     <button class="prevBtn"><i class="fas fa-chevron-left"></i></button>
                     <button class="playBtn"><i class="fas fa-play"></i></button>
+                </div>
+                <img src="public/images/test1.jpg" alt="" />
+                <div class="button">
                     <button class="pauseBtn"><i class="fas fa-pause"></i></button>
                     <button class="nextBtn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>
-        <section id="mapVelo">
+        <section id="mapStation">
             <div id="map"></div>
             <div id="stationI">
                 <h2>Détails de la station :</h2>
+                <h3 id="status"></h3>
                 <ul id="info">
+                    <li><span id="nameStation"></span></li>
                     <li>Adresse: <span id="stationAdress"></span></li>
                     <li><span id="bikesStand"></span> places</li>
                     <li><span id="availableBikes"></span> vélo(s) disponible(s)</li>
                 </ul>
+                <form id="form">
+                    <p>
+                        <label for="firstName"></label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Prénom">
+                    </p>
+                    <p>
+                        <label for="lastName"></label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Nom">
+                    </p>
+                </form>
+                <button id="resa">Réserver</button>
             </div>
+            
         </section>
         <section>
             <div id="timer">
@@ -39,11 +69,11 @@
                 <button class="timerStart">Start</button>
             </div>
         </section>
-        <section>
+        <div id="canvas">
             <canvas id="canva"></canvas>
             <button id="check">Valider</button>
             <button id="clear">Effacer</button>
-        </section>
+        </div>
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script src="js/diaporama.js"></script>
