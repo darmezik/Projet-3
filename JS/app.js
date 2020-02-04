@@ -20,7 +20,7 @@ class App {
         let yellowIcon = new Icon ({iconUrl: 'public/images/markerYellow.png'});
         let redIcon = new Icon ({iconUrl: 'public/images/markerRed.png'});
         let greyIcon = new Icon ({iconUrl: 'public/images/markerGrey.png'});
-        $.getJSON(apiUrl, function( data ){
+        $.getJSON(apiUrl, function(data){
             let stations = [];
             let icon;
             $.each(data, function(key, station){
@@ -53,15 +53,16 @@ class App {
                         document.getElementById("resa").style.display = "none";
                     }
                     document.getElementById("stationI").style.display = "block";
-                    /*document.getElementById("canva").style.display = "block";
-                    this.canva = new Canvas("canva");
-                    this.canva.canva.width=300;
-                    this.canva.canva.height=200;*/
                     document.getElementById("map").style.width = "70%";
                     document.getElementById("nameStation").innerHTML = station.name;
                     document.getElementById("stationAdress").innerHTML = station.address;
                     document.getElementById("bikesStand").innerHTML = station.bike_stands;
                     document.getElementById("availableBikes").innerHTML = station.available_bikes;
+                })
+                let close = document.getElementById("close");
+                close.addEventListener("click", function(){
+                    document.getElementById("stationI").style.display = "none";
+                    document.getElementById("map").style.width = "100%";
                 })
             }.bind(this))
         }.bind(this));
