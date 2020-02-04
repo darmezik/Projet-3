@@ -20,6 +20,9 @@ document.getElementById("resa").addEventListener('click', function(e){
             this.canva = new Canvas("canva");
             this.canva.canva.width=300;
             this.canva.canva.height=200;
+            document.getElementById("reservationName").style.display = "block";
+            document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
+            document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
         }
     }
 })

@@ -117,6 +117,14 @@ canvas{
     display: none;
 }
 
+#reservation{
+    display: flex;
+    justify-content: center;
+}
+#reservationName{
+    display: none;
+}
+
 footer div{
     height: 70px;
     background-color: rgba(240, 240, 240, 0.9);
