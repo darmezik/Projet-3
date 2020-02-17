@@ -2,7 +2,6 @@ class App {
     constructor(mapId, mapCenter, mapUrl, apiUrl){
         this.map = this.setMap(mapId, mapCenter, mapUrl)
         this.initIcon(apiUrl);
-        this.canva;
     }
     setMap(mapId, mapCenter, mapUrl){
         let map = L.map(mapId).setView(mapCenter, 10);
