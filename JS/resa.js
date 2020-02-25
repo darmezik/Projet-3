@@ -77,7 +77,7 @@ document.getElementById("resa").addEventListener('click', function(e){
         }
     }
 })
-
+let time = new Timer("timer");
 document.getElementById("reservationName").style.display = "block";
 document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
 document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
