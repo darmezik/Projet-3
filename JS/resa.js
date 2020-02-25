@@ -5,7 +5,6 @@
         this.lastName = document.getElementById("lastName");
         this.nameStation = document.getElementById("nameStation");
         this.status = document.getElementById("status");
-        this.resar = document.getElementById("resa");
         this.timer = new Timer("timer");
     }
     recovery(){
@@ -13,7 +12,7 @@
         let lastName = this.lastName;
         let nameStation = this.nameStation;
         let status = this.status;
-        this.resar.addEventListener('click', function(e){
+        document.getElementById("resa").addEventListener('click', function(e){
             if(status.innerHTML === "FERMÉE"){
                 alert("Cette station est fermée pas de réservation possible");
             }else{
@@ -66,7 +65,7 @@ document.getElementById("resa").addEventListener('click', function(e){
             document.getElementById("check").addEventListener('click', function(){
                 localStorage.setItem("firstName", firstName.value);
                 localStorage.setItem("lastName", lastName.value);
-                localStorage.setItem("nameStation", nameStation.innerHTML);
+                sessionStorage.setItem("nameStation", nameStation.innerHTML);
                 document.getElementById("canvas").style.display = "none";
                 document.getElementById("map").style.width = "100%";
                 document.getElementById("reservationName").style.display = "block";
@@ -78,10 +77,8 @@ document.getElementById("resa").addEventListener('click', function(e){
         }
     }
 })
-if(this.timer.eltChrono.textContent === "Fin du temp !"){
 
-}else{
-    document.getElementById("reservationName").style.display = "block";
-    document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
-    document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
-}
+document.getElementById("reservationName").style.display = "block";
+document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
+document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
+

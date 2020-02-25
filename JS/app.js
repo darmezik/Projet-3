@@ -43,6 +43,8 @@ class App {
                         document.getElementById("status").innerHTML = status;
                         document.getElementById("status").style.color = "green";
                         document.getElementById("form").style.display = "block";
+                        document.getElementById("firstName").innerHTML = localStorage.getItem("firstName");
+                        document.getElementById("lastName").innerHTML = localStorage.getItem("lastName");
                         document.getElementById("resa").style.display = "block";
                     }else{
                         status = "FERMÉE";
