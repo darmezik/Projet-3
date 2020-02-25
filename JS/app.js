@@ -2,6 +2,7 @@ class App {
     constructor(mapId, mapCenter, mapUrl, apiUrl){
         this.map = this.setMap(mapId, mapCenter, mapUrl)
         this.initIcon(apiUrl);
+        this.resa = new Resa();
     }
     setMap(mapId, mapCenter, mapUrl){
         let map = L.map(mapId).setView(mapCenter, 10);
@@ -43,8 +44,8 @@ class App {
                         document.getElementById("status").innerHTML = status;
                         document.getElementById("status").style.color = "green";
                         document.getElementById("form").style.display = "block";
-                        document.getElementById("firstName").innerHTML = localStorage.getItem("firstName");
-                        document.getElementById("lastName").innerHTML = localStorage.getItem("lastName");
+                        document.getElementById("firstName").value = localStorage.getItem("firstName");
+                        document.getElementById("lastName").value = localStorage.getItem("lastName");
                         document.getElementById("resa").style.display = "block";
                     }else{
                         status = "FERMÉE";

@@ -1,18 +1,20 @@
-/*class Resa{
+class Resa{
     constructor(){
-        this.canva = new Canvas("canva");
         this.firstName = document.getElementById("firstName");
         this.lastName = document.getElementById("lastName");
         this.nameStation = document.getElementById("nameStation");
         this.status = document.getElementById("status");
+        this.canva = new Canvas("canva");
         this.timer = new Timer("timer");
+        this.recovery();
+        this.displayReservation();
     }
     recovery(){
         let firstName = this.firstName;
         let lastName = this.lastName;
         let nameStation = this.nameStation;
         let status = this.status;
-        document.getElementById("resa").addEventListener('click', function(e){
+        document.getElementById("resa").addEventListener('click', (e) => {
             if(status.innerHTML === "FERMÉE"){
                 alert("Cette station est fermée pas de réservation possible");
             }else{
@@ -21,30 +23,48 @@
                 }else if(nameStation.innerHTML == ""){
                     alert("Erreur dans la récupération du nom de station !");
                 }else{
-                    localStorage.setItem("firstName", firstName.value);
-                    localStorage.setItem("lastName", lastName.value);
-                    localStorage.setItem("nameStation", nameStation.innerHTML);
+                    this.setLocal(firstName.value, lastName.value, nameStation.innerHTML);
                     console.log(localStorage);
-                    document.getElementById("stationI").style.display = "none";
-                    document.getElementById("canvas").style.display = "block";
-                    this.canva.canva.width=300;
-                    this.canva.canva.height=200;
-                    document.getElementById("reservationName").style.display = "block";
-                    document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
-                    document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
-                    timer.startTimer(Date.now() + 1000*1200);
+                    this.displayCanva();
                 }
             }
         })
-        document.getElementById("check").addEventListener('click', function(){
-            document.getElementById("canvas").style.display = "none";
-            document.getElementById("map").style.width = "100%";
+        document.getElementById("check").addEventListener('click', () => {
+            this.confirmReservation();
         })
     }
-}
-let resa = new Resa();*/
+    setLocal(firstName, lastName, station){
+        localStorage.setItem("firstName", firstName);
+        localStorage.setItem("lastName", lastName);
+        sessionStorage.setItem("nameStation", station);
+    }
+    displayCanva(){
+        document.getElementById("stationI").style.display = "none";
+        document.getElementById("canvas").style.display = "block";
+        this.canva.canva.width=300;
+        this.canva.canva.height=200;
+    }
+    confirmReservation(){
+        document.getElementById("canvas").style.display = "none";
+        document.getElementById("map").style.width = "100%";
+        document.getElementById("reservationName").style.display = "block";
+        document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
+        document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
+        this.timer.startTimer(Date.now() + 1000*1200);
+    }
+    displayReservation(){
+        if(this.timer.endTime - Date.now()){
 
-document.getElementById("resa").addEventListener('click', function(e){
+        }else{
+            document.getElementById("reservationName").style.display = "block";
+            document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
+            document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
+        }
+    }
+}
+
+
+/*document.getElementById("resa").addEventListener('click', function(e){
     let firstName = document.getElementById("firstName");
     let lastName = document.getElementById("lastName");
     let nameStation = document.getElementById("nameStation");
@@ -80,5 +100,5 @@ document.getElementById("resa").addEventListener('click', function(e){
 let time = new Timer("timer");
 document.getElementById("reservationName").style.display = "block";
 document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
-document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
+document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");*/
 
