@@ -78,10 +78,9 @@ document.getElementById("resa").addEventListener('click', function(e){
         }
     }
 })
-if(!sessionStorage.timer.endTimer){
+if(this.timer.eltChrono.textContent === "Fin du temp !"){
 
 }else{
-    let timer = new Timer("timer");
     document.getElementById("reservationName").style.display = "block";
     document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
     document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
