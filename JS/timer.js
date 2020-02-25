@@ -10,14 +10,14 @@ class Timer {
         /*this.eltStart = this.eltTimer.querySelector(".timerStart");
         this.eltStart.addEventListener('click', e => this.startTimer(Date.now() + 1000*1200));*/
         /*this.startTimer(Date.now() + 1000*1200);*/
-        this.endTime = localStorage.getItem(this.id + "endTime")
+        this.endTime = sessionStorage.getItem(this.id + "endTime")
         if(this.endTime) this.startTimer(this.endTime);
     }
     startTimer(date){
         this.endTime = date;
         this.endTimer();
         this.updateTimer();
-        localStorage.setItem(this.id + "endTime", this.endTime);
+        sessionStorage.setItem(this.id + "endTime", this.endTime);
         this.timeout = setTimeout(e => this.tic(), 1000);
     }
     updateTimer(){
@@ -33,7 +33,7 @@ class Timer {
     endTimer(){
         clearTimeout(this.timeout);
         this.eltChrono.textContent = "Fin du temp !";
-        localStorage.removeItem(this.id + "endTime");
+        sessionStorage.removeItem(this.id + "endTime");
     }
     tic(){
         this.updateTimer();

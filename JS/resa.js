@@ -1,15 +1,19 @@
 /*class Resa{
     constructor(){
-        this.canva = canva;
-        this.timer;
-        this.recovery;
+        this.canva = new Canvas("canva");
+        this.firstName = document.getElementById("firstName");
+        this.lastName = document.getElementById("lastName");
+        this.nameStation = document.getElementById("nameStation");
+        this.status = document.getElementById("status");
+        this.resar = document.getElementById("resa");
+        this.timer = new Timer("timer");
     }
     recovery(){
-        document.getElementById("resa").addEventListener('click', function(e){
-            let firstName = document.getElementById("firstName");
-            let lastName = document.getElementById("lastName");
-            let nameStation = document.getElementById("nameStation");
-            let status = document.getElementById("status");
+        let firstName = this.firstName;
+        let lastName = this.lastName;
+        let nameStation = this.nameStation;
+        let status = this.status;
+        this.resar.addEventListener('click', function(e){
             if(status.innerHTML === "FERMÉE"){
                 alert("Cette station est fermée pas de réservation possible");
             }else{
@@ -24,13 +28,11 @@
                     console.log(localStorage);
                     document.getElementById("stationI").style.display = "none";
                     document.getElementById("canvas").style.display = "block";
-                    this.canva = new Canvas("canva");
                     this.canva.canva.width=300;
                     this.canva.canva.height=200;
                     document.getElementById("reservationName").style.display = "block";
                     document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
                     document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
-                    let timer = new Timer("timer");
                     timer.startTimer(Date.now() + 1000*1200);
                 }
             }
@@ -76,10 +78,10 @@ document.getElementById("resa").addEventListener('click', function(e){
         }
     }
 })
-let timer = new Timer("timer");
-if(document.querySelector(".timerChrono").innerHTML === "Pas de réservation"){
+if(!sessionStorage.timer.endTimer){
 
 }else{
+    let timer = new Timer("timer");
     document.getElementById("reservationName").style.display = "block";
     document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
     document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");

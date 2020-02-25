@@ -51,6 +51,7 @@ class App {
                         document.getElementById("form").style.display = "none";
                         document.getElementById("resa").style.display = "none";
                     }
+                    document.getElementById("canvas").style.display = "none";
                     document.getElementById("stationI").style.display = "block";
                     document.getElementById("map").style.width = "70%";
                     document.getElementById("nameStation").innerHTML = station.name;

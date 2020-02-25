@@ -42,6 +42,9 @@ div nav ul li a{
     text-decoration: none;
 }
 
+#slides{
+    background-image: linear-gradient(to top, white, rgba(14, 209, 69, 0.1), white);
+}
 #slideshow{
     display: flex;
     justify-content: center;
@@ -67,6 +70,7 @@ div nav ul li a{
     padding-top: 33px;
     width: 100%;
     display: flex;
+    background-image: linear-gradient(to top, white, rgba(14, 209, 69, 0.2), white);
 }
 #map{
     width: 100%;
