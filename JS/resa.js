@@ -24,7 +24,6 @@ class Resa{
                     alert("Erreur dans la récupération du nom de station !");
                 }else{
                     this.setLocal(firstName.value, lastName.value, nameStation.innerHTML);
-                    console.log(localStorage);
                     this.displayCanva();
                 }
             }
@@ -50,15 +49,20 @@ class Resa{
         document.getElementById("reservationName").style.display = "block";
         document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
         document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
-        this.timer.startTimer(Date.now() + 1000*1200);
+        document.getElementById("stationResult").innerHTML = sessionStorage.getItem("nameStation");
+        document.getElementById("imageSign").style.display = "block";
+        this.timer.startTimer(Date.now() + 1000*50);
     }
     displayReservation(){
-        if(this.timer.endTime - Date.now()){
-
+        if(this.timer.eltChrono.textContent === "Pas de réservation en cours"){
+            document.getElementById("reservationName").style.display = "none";
+            document.getElementById("imageSign").style.display = "none";
         }else{
             document.getElementById("reservationName").style.display = "block";
             document.getElementById("firstNameResult").innerHTML = localStorage.getItem("firstName");
             document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
+            document.getElementById("stationResult").innerHTML = sessionStorage.getItem("nameStation");
+            document.getElementById("imageSign").src = sessionStorage.getItem("image");
         }
     }
 }

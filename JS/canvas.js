@@ -81,8 +81,9 @@ class Canvas {
         });
         document.getElementById("check").addEventListener("click", () =>{
             let image = this.canva.toDataURL();
+            sessionStorage.setItem("image", image);
             console.log("image", image);
-            document.getElementById("imageSign").src = image;
+            document.getElementById("imageSign").src = sessionStorage.getItem("image");
         })
     }
     drawLine(x, y){

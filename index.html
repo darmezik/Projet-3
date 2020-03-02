@@ -28,14 +28,14 @@
         </header>
         <section id="slides">
             <div id="slideshow">
-                <div class="button">
+                <div id="buttonLeft" class="button">
                     <button class="prevBtn"><i class="fas fa-chevron-left"></i></button>
                     <button class="playBtn"><i class="fas fa-play"></i></button>
                 </div>
-                <img src="public/images/test1.jpg" alt="" />
-                <div class="button">
-                    <button class="pauseBtn"><i class="fas fa-pause"></i></button>
+                <img src="public/images/1.jpg" alt="" />
+                <div id="buttonRight" class="button">
                     <button class="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="pauseBtn"><i class="fas fa-pause"></i></button>
                 </div>
             </div>
         </section>
@@ -63,15 +63,18 @@
                 <button id="clear">Effacer</button>
             </div>
         </section>
-        <section id="reservation">
-            <div id="reservationName">
-                <p>Réserver par Mr/Mme <span id="firstNameResult"></span> <span id="lastNameResult"></span></p>
-            </div>
-            <div id="timer">
-                <div class="timerChrono">Pas de réservation</div>
-            </div>
-            <div>
-                <image src="" id="imageSign"></image>
+        <section id="rese">
+            <div id="reservation">
+                <div id="reservationName">
+                    <p>Réserver par Mr/Mme <span id="firstNameResult"></span> <span id="lastNameResult"></span></p>
+                    <p>à la station <span id="stationResult"></span></p>
+                </div>
+                <div>
+                    <image src="" id="imageSign"></image>
+                </div>
+                <div id="timer">
+                    <div class="timerChrono">Pas de réservation en cours</div>
+                </div>
             </div>
         </section>
         <footer>

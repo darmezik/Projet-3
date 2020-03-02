@@ -32,7 +32,7 @@ class Timer {
     }
     endTimer(){
         clearTimeout(this.timeout);
-        this.eltChrono.textContent = "Fin du temp !";
+        this.eltChrono.textContent = "Fin de la réservation !";
         sessionStorage.removeItem(this.id + "endTime");
     }
     tic(){

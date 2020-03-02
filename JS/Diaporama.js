@@ -57,9 +57,8 @@ class Slideshow{
 }
 const path = "public/images/"
 var slide = new Slideshow('slideshow',[
-    path+"test1.jpg",
-    path+"test2.jpg",
-    path+"test3.jpg",
-    path+"test4.jpg",
-    path+"test5.jpg"
+    path+"1.jpg",
+    path+"2.jpg",
+    path+"3.jpg",
+    path+"4.jpg"
 ]);

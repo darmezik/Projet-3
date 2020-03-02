@@ -3,15 +3,23 @@ body{
     margin: 0;
 }
 header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;
     background-color: rgba(240, 240, 240, 0.9);
     border-bottom: 1px solid grey;
-    box-shadow: 0px 5px 10px grey;
+    -webkit-box-shadow: 0px 5px 10px grey;
+            box-shadow: 0px 5px 10px grey;
 }
 header div ul li a{
     color: rgb(14, 209, 69);
@@ -22,6 +30,8 @@ header div ul li a:hover{
     border-top: 2px solid rgb(14, 209, 69);
 }
 #logo{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 #bike{
@@ -32,6 +42,8 @@ header div ul li a:hover{
     height: 80%;
 }
 div nav ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 div nav ul li{
@@ -43,22 +55,41 @@ div nav ul li a{
 }
 
 #slides{
+    background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(rgba(14, 209, 69, 0.1)), to(white));
+    background-image: -o-linear-gradient(bottom, white, rgba(14, 209, 69, 0.1), white);
     background-image: linear-gradient(to top, white, rgba(14, 209, 69, 0.1), white);
 }
 #slideshow{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 #slideshow img{
-    width: 30%;
+    width: 100%;
 }
-.button{
-    margin: 0 10px 0 10px;
+#buttonLeft{
+    position: relative;
+    left: 50px;
+}
+#buttonRight{
+    position: relative;
+    right: 50px;
+}
+button{
+    margin: 15px 0 15px 0;
 }
 .button i{
     font-size: 140%;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    border: 2px solid rgb(14, 209, 69);
+    padding: 10px;
 }
 .button button{
     border: none;
@@ -69,13 +100,18 @@ div nav ul li a{
 #mapStation{
     padding-top: 33px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(rgba(14, 209, 69, 0.2)), to(white));
+    background-image: -o-linear-gradient(bottom, white, rgba(14, 209, 69, 0.2), white);
     background-image: linear-gradient(to top, white, rgba(14, 209, 69, 0.2), white);
 }
 #map{
     width: 100%;
     height: 800px;
     margin: 50px;
+    border: 3px solid rgb(14, 209, 69);
     border-radius: 20px;
     z-index: 2;
 }
@@ -87,7 +123,7 @@ div nav ul li a{
     margin: auto;
     width: 20%;
     background-color: rgba(255,255,255,0.8);
-    border: 2px solid grey;
+    border: 2px solid rgb(14, 209, 69);
     border-radius: 10px;
 }
 #resa{
@@ -100,10 +136,13 @@ div nav ul li a{
     margin: 5px;
 }
 .fa-times-circle{
-    color: grey;
+    color: rgb(14, 209, 69);
     font-size: 25px;
     float: right;
     cursor: pointer;
+}
+.fa-times-circle:hover{
+    color: black;
 }
 .fa-times-circle:active{
     color: black;
@@ -115,24 +154,49 @@ div nav ul li a{
 }
 canvas{
     background: white;
-    border: 1px solid black;
+    border: 2px solid rgb(14, 209, 69);
+    border-radius: 20px;
 }
 #check, #clear{
     display: none;
 }
 
+#rese{
+    background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(rgba(14, 209, 69, 0.1)), to(white));
+    background-image: -o-linear-gradient(bottom, white, rgba(14, 209, 69, 0.1), white);
+    background-image: linear-gradient(to top, white, rgba(14, 209, 69, 0.1), white);
+}
 #reservation{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
     justify-content: center;
+    width: max-content;
+    margin: auto auto 50px auto;
+    padding: 10px 20px;
+    border: 3px solid rgb(14, 209, 69);
+    border-radius: 20px;
 }
 #reservationName{
     display: none;
+}
+#imageSign{
+    border: 1px solid rgb(14, 209, 69);
+    border-radius: 20px;
+    margin: 0 20px;
+}
+#timer{
+    margin: 0 20px;
 }
 
 footer div{
     height: 70px;
     background-color: rgba(240, 240, 240, 0.9);
     border-top: 1px solid grey;
-    box-shadow: 5px 0px 10px grey;
+    -webkit-box-shadow: 5px 0px 10px grey;
+            box-shadow: 5px 0px 10px grey;
     text-align: center;
 }
