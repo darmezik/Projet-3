@@ -23,23 +23,22 @@ class Resa{
                 }else if(nameStation.innerHTML == ""){
                     alert("Erreur dans la récupération du nom de station !");
                 }else{
-                    if(this.timer.eltChrono.textContent === "Pas de réservation en cours"){
-                        this.setLocal(firstName.value, lastName.value, nameStation.innerHTML);
-                        this.displayCanva();
-                    }else{
-                        if(confirm("Une réservation est en cours voulez-vous l'écraser ?")){
-                            this.setLocal(firstName.value, lastName.value, nameStation.innerHTML);
-                            this.displayCanva();
-                        }else{
-                            document.getElementById("stationI").style.display = "none";
-                            document.getElementById("map").style.width = "100%";
-                        }
-                    }
+                    this.setLocal(firstName.value, lastName.value, nameStation.innerHTML);
+                    this.displayCanva(); 
                 }
             }
         })
         document.getElementById("check").addEventListener('click', () => {
-            this.confirmReservation();
+            if(this.timer.eltChrono.textContent === "Pas de réservation en cours"){
+                this.confirmReservation();
+            }else{
+                if(confirm("Une réservation est en cours voulez-vous l'écraser ?")){
+                    this.confirmReservation();
+                }else{
+                    document.getElementById("canvas").style.display = "none";
+                    document.getElementById("map").style.width = "100%";
+                }
+            }
         })
     }
     setLocal(firstName, lastName, station){

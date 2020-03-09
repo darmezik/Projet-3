@@ -21,11 +21,12 @@
                 <nav>
                     <ul>
                         <li><a href="#logo">Accueil</a></li>
-                        <li><a href="#mapStation">Carte</a></li>
+                        <li><a href="#titleMap">Carte</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <h2>Diaporama de présentation</h2>
         <section id="slides">
             <div id="slideshow">
                 <div id="buttonLeft" class="button">
@@ -34,11 +35,12 @@
                 </div>
                 <img src="public/images/1.jpg" alt="" />
                 <div id="buttonRight" class="button">
-                    <button class="nextBtn"><i class="fas fa-chevron-right"></i></button>
                     <button class="pauseBtn"><i class="fas fa-pause"></i></button>
+                    <button class="nextBtn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>
+        <h2 id="titleMap">Carte des stations vélo pour réservation</h2>
         <section id="mapStation">
             <div id="map"></div>
             <div id="stationI">
@@ -59,8 +61,10 @@
             </div>
             <div id="canvas">
                 <canvas id="canva" width="300" height="200"></canvas>
-                <button id="check">Valider</button>
-                <button id="clear">Effacer</button>
+                <div>
+                    <button id="check">Valider</button>
+                    <button id="clear">Effacer</button>
+                </div>
             </div>
         </section>
         <section id="rese">
