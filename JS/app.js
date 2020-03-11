@@ -5,7 +5,7 @@ class App {
         this.resa = new Resa();
     }
     setMap(mapId, mapCenter, mapUrl){
-        let map = L.map(mapId).setView(mapCenter, 10);
+        let map = L.map(mapId).setView(mapCenter, 11);
         L.tileLayer(mapUrl, {
             maxZoom: 19,
             apikey: 'choisirgeoportail',

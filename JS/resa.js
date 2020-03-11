@@ -60,7 +60,7 @@ class Resa{
         document.getElementById("lastNameResult").innerHTML = localStorage.getItem("lastName");
         document.getElementById("stationResult").innerHTML = sessionStorage.getItem("nameStation");
         document.getElementById("imageSign").style.display = "block";
-        this.timer.startTimer(Date.now() + 1000*50);
+        this.timer.startTimer(Date.now() + 1000*1200);
     }
     displayReservation(){
         if(this.timer.eltChrono.textContent === "Pas de réservation en cours"){

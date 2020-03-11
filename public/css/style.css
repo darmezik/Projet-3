@@ -55,8 +55,9 @@ div nav ul li a{
 }
 h2{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 10px;
+    font-family: 'Lato';
 }
 #titleMap{
     padding-top: 66px;
@@ -120,8 +121,11 @@ button{
     border-radius: 20px;
     z-index: 2;
 }
-#stationI h2, #stationI h3{
+#stationI h3, #stationI h4{
     text-align: center;
+}
+#stationI h3{
+    font-size: 1.5em;
 }
 #stationI{
     display: none;
