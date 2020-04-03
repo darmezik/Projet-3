@@ -53,6 +53,10 @@ class Resa{
         this.canva.canva.height=200;
     }
     confirmReservation(){
+        let image = this.canva.canva.toDataURL();
+        sessionStorage.setItem("image", image);
+        console.log("image", image);
+        document.getElementById("imageSign").src = sessionStorage.getItem("image");
         document.getElementById("canvas").style.display = "none";
         document.getElementById("map").style.width = "100%";
         document.getElementById("reservationName").style.display = "block";

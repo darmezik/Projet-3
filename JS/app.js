@@ -68,8 +68,14 @@ class App {
                 })
                 let close = document.getElementById("close");
                 close.addEventListener("click", function(){
-                    document.getElementById("stationI").style.display = "none";
-                    document.getElementById("map").style.width = "100%";
+                    if(document.body.clientWidth < 768){
+                        document.getElementById("stationI").style.display = "none";
+                        document.getElementById("map").style.width = "90%";
+                        window.location.href="#map";
+                    }else{
+                        document.getElementById("stationI").style.display = "none";
+                        document.getElementById("map").style.width = "100%";
+                    }
                 })
             }.bind(this))
         }.bind(this));

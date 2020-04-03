@@ -79,12 +79,6 @@ class Canvas {
         $('#clear').on('click',  () =>{
             this.ctx.clearRect(0, 0, this.canva.width, this.canva.height);
         });
-        document.getElementById("check").addEventListener("click", () =>{
-            let image = this.canva.toDataURL();
-            sessionStorage.setItem("image", image);
-            console.log("image", image);
-            document.getElementById("imageSign").src = sessionStorage.getItem("image");
-        })
     }
     drawLine(x, y){
         if (this.lastX == -1){
