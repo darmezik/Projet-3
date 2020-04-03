@@ -4,6 +4,7 @@ class Slideshow{
         this.imgs = imgs;
         this.domSlide = document.getElementById(this.idSlide);
         this.domImg = this.domSlide.querySelector('img');
+        this.domText = document.getElementById("textSlide");
         this.domPrev = this.domSlide.querySelector('div .prevBtn');
         this.domPlay = this.domSlide.querySelector('div .playBtn');
         this.domPause = this.domSlide.querySelector('div .pauseBtn');
@@ -23,14 +24,16 @@ class Slideshow{
         if(this.imgNumber > (this.imgs.length - 1)){
             this.imgNumber = 0;
         }
-        this.domImg.src = this.imgs[this.imgNumber];
+        this.domImg.src = this.imgs[this.imgNumber].image;
+        this.domText.textContent = this.imgs[this.imgNumber].text;
     }
     prevImage(){
         this.imgNumber--;
         if(this.imgNumber < 0){
             this.imgNumber = this.imgs.length - 1;
         }
-        this.domImg.src = this.imgs[this.imgNumber];
+        this.domImg.src = this.imgs[this.imgNumber].image;
+        this.domText.textContent = this.imgs[this.imgNumber].text;
     }
     play(){
         this.timer = setInterval(this.nextImage.bind(this), 5000);
@@ -55,10 +58,3 @@ class Slideshow{
         }
     }
 }
-const path = "public/images/"
-    var slide = new Slideshow('slideshow',[
-        path+"1.jpg",
-        path+"2.jpg",
-        path+"3.jpg",
-        path+"4.jpg"
-    ]);

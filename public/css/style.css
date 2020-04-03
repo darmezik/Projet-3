@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     padding: 0;
     margin: 0;
@@ -7,11 +10,11 @@ header{
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -59,6 +62,9 @@ h2{
     margin-bottom: 10px;
     font-family: 'Lato';
 }
+h3{
+    font-family: 'Lato';
+}
 #titleMap{
     padding-top: 66px;
 }
@@ -78,9 +84,21 @@ h2{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
 }
 #slideshow img{
     width: 80%;
+}
+#textSlide{
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    right: 10%;
+    text-align: center;
+    background-color: #0000007d;
+    color: white;
+    font-size: 2em;
+    margin: 0;
 }
 button{
     margin: 15px 0 15px 0;
@@ -210,5 +228,33 @@ footer div{
     border-top: 1px solid grey;
     -webkit-box-shadow: 5px 0px 10px grey;
             box-shadow: 5px 0px 10px grey;
-    text-align: center;
+            text-align: center;
+}
+@media only screen and (max-width: 1024px){
+    header{
+        justify-content: ;
+    }
+    #map{
+        margin: 0px 30px 50px 30px;
+    }
+    #stationI{
+        margin: auto 10px auto 10px;
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 768px){
+    #logo{
+        width: 70%;
+    }
+    #mapStation{
+        flex-direction: column;
+    }
+    #map{
+        width: 90%;
+        margin: auto;
+    }
+    #stationI{
+        width: 40%;
+        margin: 30px auto;
+    }
 }

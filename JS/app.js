@@ -56,7 +56,11 @@ class App {
                     }
                     document.getElementById("canvas").style.display = "none";
                     document.getElementById("stationI").style.display = "block";
-                    document.getElementById("map").style.width = "70%";
+                    if(document.body.clientWidth > 768){
+                        document.getElementById("map").style.width = "70%";
+                    }else{
+                        window.location.href="#stationI";
+                    }
                     document.getElementById("nameStation").innerHTML = station.name;
                     document.getElementById("stationAdress").innerHTML = station.address;
                     document.getElementById("bikesStand").innerHTML = station.bike_stands;

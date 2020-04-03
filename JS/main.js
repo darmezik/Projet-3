@@ -1,3 +1,10 @@
+const path = "public/images/"
+var slide = new Slideshow('slideshow',[
+    {id: 1, image: path+"1.jpg", text:""},
+    {id: 2, image: path+"2.jpg", text:"Etape 1"},
+    {id: 3, image: path+"3.jpg", text:"Etape 2"},
+    {id: 4, image: path+"4.jpg", text:"Etape 3"}
+]);
 let app = new App(
     'map',
     [45.7578137, 4.8320114], 
